@@ -1,6 +1,6 @@
 body {
     margin:0;
-    background-color:FAD89B;
+    background-color:#FFF4DB;
 }
 
 .header {
@@ -9,7 +9,7 @@ body {
     justify-content:space-between;
     max-height:144px;
     max-width:100%;
-    background-color:0053B3;
+    background-color:382D40;
 }
 
 .one {
@@ -61,7 +61,7 @@ body {
     display:flex;
     justify-content:flex-end;
     align-items:center;
-    background-color:rgb(122, 122, 122);
+    background-color:rgb(221, 221, 221);
     height:72px;
     font-size:12pt;
     border-radius:5px;
@@ -76,7 +76,7 @@ body {
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:rgb(122,122,122);
+    background-color:rgb(221, 221, 221);
     border:dashed;
     padding-left:140px;
     padding-right:140px;
