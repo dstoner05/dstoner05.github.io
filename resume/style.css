@@ -138,3 +138,13 @@ a:link {
         font-size:9;
     }
 }
+
+@media only screen and (min-width:375px) {
+    .wrapper {
+        max-width: width 375px;
+        max-height:700px:
+    }
+    .aboutme {
+        font-size:10pt;
+    }
+}
