@@ -30,16 +30,25 @@
         const d = str.length;
         const e = str.charAt(3);
         const header = document.querySelector(".header");
-        header.textContent = `Dalton's Lab 4 ${d}`;
-        
-
         const content = document.querySelector(".content");
-        const a = document.createElement("p");
-        a.className = "class1";
-        content.appendChild(a);
-        a.textContent = `My name has ${d} letters`;
+        header.textContent = `Dalton's Lab 4 ${d}`;
 
-      
+        const a = document.createElement("p");
+        
+        const b = document.createElement("p");
+
+        
+        a.className = "class1";
+        content.innerHTML = " ";
+
+        
+        b.className = "class2";
+        a.innerHTML = `My name has ${d} letters`;
+        b.innerHTML = `My name has ${d} letters`;
+        
+        content.appendChild(a);
+        content.appendChild(b);
+
        
      
       }
