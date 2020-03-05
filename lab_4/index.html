@@ -31,9 +31,12 @@
         const e = str.charAt(2);
         const f = e.toUpperCase();
         const g = str.slice(10,13);
+        const h = str.split(" ");
+        const namelength = h[0].length + h[1].length;
+        const i = h.length;
         const header = document.querySelector(".header");
         const content = document.querySelector(".content");
-        header.textContent = `Dalton's Lab 4 ${d}`;
+        header.textContent = `Dalton's Lab 4 ${namelength}`;
         const a = document.createElement("p");
         const b = document.createElement("p");
 
@@ -41,7 +44,7 @@
         a.className = "class1";
         content.innerHTML = " ";
         b.className = "class2";
-        a.innerHTML = `My name has ${d} letters`;
+        a.innerHTML = `My name has ${d} characters`;
         b.innerHTML = `The third letter in my first name is ${f} <br /> ${g}`;
         
         content.appendChild(a);
