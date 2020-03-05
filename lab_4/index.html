@@ -28,26 +28,26 @@
       function clickMe() {
         const str = "Dalton Stoner";
         const d = str.length;
-        const e = str.charAt(3);
+        const e = str.charAt(2);
+        const f = e.toUpperCase();
+        const g = str.slice(10,13);
         const header = document.querySelector(".header");
         const content = document.querySelector(".content");
         header.textContent = `Dalton's Lab 4 ${d}`;
-
         const a = document.createElement("p");
-        
         const b = document.createElement("p");
 
         
         a.className = "class1";
         content.innerHTML = " ";
-
-        
         b.className = "class2";
         a.innerHTML = `My name has ${d} letters`;
-        b.innerHTML = `My name has ${d} letters`;
+        b.innerHTML = `The third letter in my first name is ${f} <br /> ${g}`;
         
         content.appendChild(a);
         content.appendChild(b);
+
+
 
        
      
