@@ -25,7 +25,7 @@
       </div>
     </div>
     <script>
-        const mymap =L.map('map1').setView([51.505, -0.09], 13);
+        const mymap =L.map('map1').setView([38.9897, -76.9378], 13);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
@@ -34,7 +34,12 @@
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoiZHN0b25lcjA1IiwiYSI6ImNrOGtxYnpvZjAwMW8zZmt6aWZpeGthZWEifQ.iI521SUarUlx2k3ct6pxbQ'
       }).addTo(mymap);
-      const marker = L.marker([43.6426, -79.3871]).addTo(mymap)
+      const marker = L.marker([38.988112, -76.941558]).addTo(mymap)
+      marker.bindPopup("<b>Hornbake Library</b>").openPopup();
+      const popup= L.popup()
+        .setLatLng([38.988112, -76.941558])
+        .setContent("Hornbake Library")
+        .openon(mymap);
     </script>
   </body>
 </html>
