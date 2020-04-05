@@ -106,3 +106,10 @@ h3 {
   position: relative;
   top: 1px;
 }
+
+.leaflet-popup-content-wrapper {
+  border: dashed 2px blue;
+  font-size:10pt;
+  font-weight:bold;
+  
+}
