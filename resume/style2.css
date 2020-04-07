@@ -101,7 +101,6 @@ ul, li {
 @media only screen and (max-width:480px) {
     .references {
         max-width:360px;
-        font-size:10pt;
         height:480px;
     }
     h2 {
