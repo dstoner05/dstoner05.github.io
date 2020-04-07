@@ -79,3 +79,21 @@ a:link {
     margin-top:45px;
     margin-bottom:45px;
 }
+
+ul, li {
+    list-style:none;
+}
+
+.experience {
+    font-size:13pt;
+}
+
+@media only screen and (max-width:640px) {
+    .wrapper {
+        max-width:480px;
+    }
+    .experience {
+        max-width:480px;
+        font-size:11pt;
+    }
+}
