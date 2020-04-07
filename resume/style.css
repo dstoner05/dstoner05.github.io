@@ -66,6 +66,7 @@ a:link {
 .wrapper {
     display:flex;
     max-width:960px;
+    min-width:680px;
     max-height:650px;
     flex-direction:row;
     background-color:FFFBEB;
