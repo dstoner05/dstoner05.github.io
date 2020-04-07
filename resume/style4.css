@@ -74,7 +74,7 @@ a:link {
     border-width:3px;
     border-color:black;
     border-radius:15px;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     margin-top:45px;
     margin-bottom:45px;
@@ -84,19 +84,26 @@ ul, li {
     list-style:none;
 }
 
-.experience {
+.work-experience {
     font-family: 'Open Sans', sans-serif;
     font-size:13pt;
-    margin:10px;
     padding:10px;
+    margin:10px;
 }
 
 @media only screen and (max-width:640px) {
     .wrapper {
         max-width:480px;
+        display:flex;
+        justify-content:center;
     }
-    .experience {
+    .h2 {
+        display:flex;
+        justify-content:center;
+    }
+    .work-experience{
         max-width:480px;
         font-size:11pt;
     }
+    
 }

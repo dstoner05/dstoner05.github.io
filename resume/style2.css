@@ -85,6 +85,8 @@ ul, li {
 }
 
 .references {
+    font-family: 'Open Sans', sans-serif;
+    font-size:13pt;
     padding:10px;
     margin:10px;
 }

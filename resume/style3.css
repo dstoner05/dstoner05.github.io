@@ -85,6 +85,22 @@ ul, li {
 }
 
 .leadership {
+    font-family: 'Open Sans', sans-serif;
+    font-size:13pt;
     padding:10px;
     margin:10px;
+}
+
+@media only screen and (max-width:640px) {
+    .wrapper {
+        max-width:480px;
+        display:flex;
+        justify-content:center;
+    }
+
+    .leadership{
+        max-width:480px;
+        font-size:11pt;
+    }
+    
 }
