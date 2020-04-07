@@ -84,18 +84,7 @@ ul, li {
     list-style:none;
 }
 
-.experience {
-    font-size:13pt;
-    margin:10px;
+.leadership {
     padding:10px;
-}
-
-@media only screen and (max-width:640px) {
-    .wrapper {
-        max-width:480px;
-    }
-    .experience {
-        max-width:480px;
-        font-size:11pt;
-    }
+    margin:10px;
 }
