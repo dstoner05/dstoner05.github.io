@@ -4,7 +4,6 @@ body{
     background-image: url("background.jpg");
     background-position:center;
     background-size:auto;
-    background-repeat:no-repeat;
     height:500px;
 
 }
@@ -79,31 +78,4 @@ a:link {
     align-items:center;
     margin-top:45px;
     margin-bottom:45px;
-}
-
-.text {
-    max-height:525px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.aboutme {
-    height:550px;
-    font-size:12pt;
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    flex-direction:column;
-    margin-top:0;
-    margin-left:10px;
-    min-width:270px;
-}
-
-.img1 img {
-    border-radius:15px;
-    max-height:650px;
-    border-right:solid;
-    border-color:black;
-    border-width:3px;
-    overflow:hidden;
-
 }
