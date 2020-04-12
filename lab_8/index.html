@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Charts Lab</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Frontend Libraries: Charts Lab</div>
+        <div class="content">
+          When your lab is done, this should be replaced with a useful chart full of food data.
+        </div>
+        <div class="footer">Let's eat out in the future!</div>
+      </div>
+    </div>
+    <script>
+      fetch(' https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json') // replace this with the food safety data set
+      .then((response) => {
+        console.log("response information", response);
+        return response;
+      })
+      .then((data) => data.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
+        .then((data) => { 
+          console.log(data)
+          const clearEmptyData = data.filter((f) => f.geocoded_column_1);
+          const refined = clearEmptyData.map((m) => {
+            category: m.category,
+            name: m.name,
+            latLong: m.geocoded_column_1.coordinates,
+
+          }));
+      
+          return refined;
+
+          .then((data) => { 
+            return data.reduce((c, current) => {
+              if (!c[current.category]) {
+                
+                result[current.category]= [];
+              }
+              result[current.category].push(current);
+              return result;
+            });
+
+            .then((data) => {
+              console.log('new data', data);
+              const reformattedData = object.entries(data).map((m, i) => {
+                console.log(m);
+                return {
+                  y: m[1].length,
+                  label: m[0],
+                };
+              })
+              return reformattedData;
+            });
+            .then((results) => {
+              console.log(results);
+              const chart = new CanvasJS.Chart("chartContainer", {
+	            theme: "light2", // "light1", "light2", "dark1", "dark2"
+	            exportEnabled: true,
+	            animationEnabled: true,
+	            title: {
+		          text: "Desktop Browser Market Share in 2016"
+	            },
+	            data: [{
+		          type: "pie",
+		          startAngle: 25,
+		          toolTipContent: "<b>{label}</b>: {y}%",
+		          showInLegend: "true",
+		          legendText: "{label}",
+		          indexLabelFontSize: 16,
+		          indexLabel: "{label} - {y}%",
+		          dataPoints: [
+		          	{ y: 51.08, label: "Chrome" },
+		          	{ y: 27.34, label: "Internet Explorer" },
+		          	{ y: 10.62, label: "Firefox" },
+			          { y: 5.02, label: "Microsoft Edge" },
+			          { y: 4.07, label: "Safari" },
+		          	{ y: 1.22, label: "Opera" },
+		          	{ y: 0.44, label: "Others" }
+		          ]
+          	}]
+          });
+          chart.render();
+            })
+
+    </script>
+  </body>
+</html>
