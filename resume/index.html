@@ -9,9 +9,6 @@
 </head> 
 <body> 
     <div class = "header">
-        <div class = "one">
-            <h1>Dalton Stoner</h1>
-        </div>
         <div class = "navigation">
             <ul>
                 <div class="tabs">
@@ -39,6 +36,14 @@
             <div class="img1">
                 <img src="selfimg.JPG" alt="A photo of me" max-height:550px;>
             </div>
+            <span id="typed"></span>
+            <div class="typed-strings">
+                <p>Hello! I'm Dalton</p>
+                <p>Welcome to my <span class="highlight">resume</span></p>
+                <p>I am a student at the <span class="highlight red">University of Maryland</span></p>
+                <p>I am excited to show you my work!</p>
+            </div>
+            
             <div  class="text">
                 <div class="aboutme">
                     <h3>Welcome to my resume in the form of a webpage!</h3>
@@ -57,4 +62,14 @@
 
 
 </body>
+<script src ="typed.min.js"
+<script>
+    
+    const typed = new Typed('.typed-strings', {
+        typeSpeed: 30
+    });
+	
+	
+
+</script>
 </html>

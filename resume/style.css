@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    background-image: url("background.jpg");
+    background-color: lightgray;
     background-position:center;
     background-size:auto;
     height:500px;
@@ -9,25 +9,16 @@ body{
 }
 .header{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     background-color:lightgray;
     margin:0;
     width:100%;
 }
-.one{
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
-    height:90px;
-    margin-left:20px;
-    font-size:18pt;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight:600;
-    white-space:nowrap;
-}
+
+
 .navigation {
     display:flex;
-    justify-content:flex-end;
+    justify-content:center;
     align-items:center;
     flex-direction:row;
     list-style-type: none;
@@ -65,21 +56,23 @@ a:link {
 }
 .wrapper {
     display:flex;
-    max-width:960px;
-    min-width:680px;
-    max-height:650px;
-    flex-direction:row;
-    background-color:FFFBEB;
-    border:solid;
-    border-width:3px;
-    border-color:black;
-    border-radius:15px;
     justify-content:center;
-    align-items:center;
-    margin-top:45px;
-    margin-bottom:45px;
+    flex-direction:column;
+
+
 }
 
+.img1 {
+    display:flex;
+    justify-content:center;
+    max-height:500;
+    width:auto;
+}
+
+.typed-strings {
+    display:flex;
+    justify-content:center;
+}
 .text {
     max-height:525px;
     font-family: 'Open Sans', sans-serif;
