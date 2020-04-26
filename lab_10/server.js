@@ -46,10 +46,21 @@ function processDataForFrontEnd(req, res) {
 app
   .route("/api")
   .put((req, res) => {
+    const db = new sqlite3.Database(':memory:');
+    req.db(req)
+    return ('Yes success');
+    // close the database connection
+    db.close((err) => {
+      if (err) {
+        return console.error(err.message);
+      }
+      console.log('Close the database connection.');
+    });
     console.log("Put request", req)
+    
   })
   .get((req, res) => {
-    // processDataForFrontEnd(req, res)
+    processDataForFrontEnd(req, res)
     (async () => {
       const db = await open(dbSettings);
       const result = await db.all("SELECT * FROM user");
