@@ -19,7 +19,7 @@ import textwrap
 
 
 num_cars = 40
-num_res = 99
+num_res = 100
 y = 50
 z = 20
 number_hours = 70
@@ -39,7 +39,7 @@ index1 = []
 ct2 = []
 garage1 = ['1', '2', '3', '4']
 g1 = []
-
+s= []
 
 
 
@@ -75,6 +75,7 @@ for i in range(num_res):
     index.append(i)
     ct.append(TYPE_OF_CAR)
     g.append(garage_type)
+    s.append('0')
 
 for i in range(num_res):
     TYPE_OF_CAR1 = r.choice(car_type)
@@ -96,7 +97,8 @@ dat = pd.DataFrame(
     'Number_hours' : nh,
     'ID' : index,
     'Type' : ct, 
-    'Garage' : g
+    'Garage' : g,
+    'Status' : s
 })
 
 second_dataset = pd.DataFrame(
@@ -104,7 +106,9 @@ second_dataset = pd.DataFrame(
      'Number_hours' : nh1,
      'ID' : index1,
      'Type' : ct1,
-     'Garage' : g1
+     'Garage' : g1,
+     'Status' : s
+     
 })
 
 data_chart=dat.sort_values(by =['Start', 'Number_hours'])
@@ -244,7 +248,7 @@ def __main__():
             
     state = True
     def function():
-        col_list= ['Start', 'Number_hours', 'ID']
+        col_list= ['Start', 'Number_hours', 'ID', 'Type', 'Garage', 'Status']
         df = pd.read_csv("algorithm.csv", usecols= col_list)
         
 
@@ -327,7 +331,7 @@ def __main__():
     # df.to_csv('dump.csv')
     
     def second_data():
-        col_list= ['Start', 'Number_hours', 'ID']
+        col_list= ['Start', 'Number_hours', 'ID', 'Type', 'Garage', 'Status']
         df = pd.read_csv("algorithm.csv", usecols= col_list)
         second_df = pd.read_csv("algorithm1.csv", usecols = col_list)
         t = df.append(second_df)
@@ -521,8 +525,7 @@ def __main__():
         print('Ratio of filled to non-filled slots:', ratio)
         print("Number failed =", failure_count)
         num_scheduled = "successfully scheduled"
-        df.to_csv("algorithm.csv")
-        second_df.to_csv("algorithm1.csv")
+        
     
      
     while True:
