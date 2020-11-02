@@ -1,0 +1,88 @@
+body {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #000000;
+    padding: 0 10px;
+    background: #eee;
+  }
+
+.title {
+    background-color: #06641F;
+    color: white;
+    width:250px;
+}
+
+.words {
+    background-color: #06641F;
+    color: white;
+    width:350px;
+    border-radius:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    max-height:50px;
+    margin-bottom: 10px;
+}
+.container {
+    padding-left: 250px;
+    height:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+.container1 {
+    background-color:#3930B1;
+    padding-left: 250px;
+    height:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+
+h2 {
+    color:white;
+    width:300;
+    height:35;
+    display:flex;
+    padding:0;
+    margin:0;
+    justify-content:space-between;
+}
+
+.header {
+    overflow-wrap: normal;
+    border-color:black;
+    font-size:14pt;
+    display:flex;
+    width: 400px;
+    max-height:35px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.notesbox {
+    border-left-color:black;
+    display:flex;
+    height:60px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:250px;
+}
+
+.Pass {
+    border-left-color:black;
+    display:flex;
+    width: 100px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Fail {
+    border-left-color:black;
+    padding-right: 550px;
+    display: flex;
+    width: 100px;
+    justify-content: flex-end;
+    align-items:flex-start;
+}
+
