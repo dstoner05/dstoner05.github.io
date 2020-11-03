@@ -2,6 +2,17 @@
 <html lang = "en"></html>
 
 <script type="type/javascript" src="index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="libs/flashcanvas.js"></script>
+	<![endif]-->
+	<script src="jSignature.min.js"></script>
+	<div id="signature"></div>
+	<script>
+	    $(document).ready(function() {
+	        $("#signature").jSignature()
+	    })
+	</script>
 <head>
     <title>Pre Trip Inspection</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
