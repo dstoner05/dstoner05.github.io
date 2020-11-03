@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en"></html>
+
+<script type="type/javascript" src="index.js"></script>
 <head>
     <title>Pre Trip Inspection</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
@@ -349,7 +351,7 @@
                 </div>
             </div>
             <div class="notesbox">
-                <input type="text" id="notes" name="notes" size="40" style="height:40px;">
+                <input type="text" id="notes" name="notes" size="80" style="height:45px; word-wrap: normal;">
                 <label for="notes"></label><br>
             </div>
             
@@ -359,10 +361,13 @@
                 </div>
             </div>
             <div class="canvas">
-                <canvas id="canvas"></canvas>
-                <script src="index.js"></script>
+                <canvas id="canvas" name="canvas"></canvas>
+                <input type="button" value="Clear" class="canvas-clear">
             </div>
         </form>
+        <div class="button">
+            <input type="button" value="Submit">
+        </div>
 
         </div>
     </div>

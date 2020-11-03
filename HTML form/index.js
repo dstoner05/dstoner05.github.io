@@ -1,76 +1,112 @@
-// wait for the content of the window element 
-// to load, then performs the operations. 
-// This is considered best practice. 
-window.addEventListener('load', ()=>{ 
-        
-    resize(); // Resizes the canvas once the window loads 
-    document.addEventListener('mousedown', startPainting); 
-    document.addEventListener('mouseup', stopPainting); 
-    document.addEventListener('mousemove', sketch); 
-    window.addEventListener('resize', resize); 
-}); 
-    
-const canvas = document.querySelector('#canvas'); 
-   
-// Context for the canvas for 2 dimensional operations 
-const ctx = canvas.getContext('2d'); 
-    
-// Resizes the canvas to the available size of the window. 
-function resize(){ 
-  ctx.canvas.width = window.innerWidth; 
-  ctx.canvas.height = window.innerHeight; 
-} 
-    
-// Stores the initial position of the cursor 
-let coord = {x:0 , y:0};  
-   
-// This is the flag that we are going to use to  
-// trigger drawing 
-let paint = false; 
-    
-// Updates the coordianates of the cursor when  
-// an event e is triggered to the coordinates where  
-// the said event is triggered. 
-function getPosition(event){ 
-  coord.x = event.clientX - canvas.offsetLeft; 
-  coord.y = event.clientY - canvas.offsetTop; 
-} 
+(function() {
+    window.requestAnimFrame = (function(callback) {
+      return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimaitonFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+    })();
   
-// The following functions toggle the flag to start 
-// and stop drawing 
-function startPainting(event){ 
-  paint = true; 
-  getPosition(event); 
-} 
-function stopPainting(){ 
-  paint = false; 
-} 
-    
-function sketch(event){ 
-  if (!paint) return; 
-  ctx.beginPath(); 
-    
-  ctx.lineWidth = 5; 
-   
-  // Sets the end of the lines drawn 
-  // to a round shape. 
-  ctx.lineCap = 'round'; 
-    
-  ctx.strokeStyle = 'green'; 
-      
-  // The cursor to start drawing 
-  // moves to this coordinate 
-  ctx.moveTo(coord.x, coord.y); 
-   
-  // The position of the cursor 
-  // gets updated as we move the 
-  // mouse around. 
-  getPosition(event); 
-   
-  // A line is traced from start 
-  // coordinate to this coordinate 
-  ctx.lineTo(coord.x , coord.y); 
-    
-  // Draws the line. 
-  ctx.stroke(); 
-} 
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.strokeStyle = "#222222";
+    ctx.lineWidth = 4;
+  
+    var drawing = false;
+    var mousePos = {
+      x: 0,
+      y: 0
+    };
+    var lastPos = mousePos;
+  
+    canvas.addEventListener("mousedown", function(e) {
+      drawing = true;
+      lastPos = getMousePos(canvas, e);
+    }, false);
+  
+    canvas.addEventListener("mouseup", function(e) {
+      drawing = false;
+    }, false);
+  
+    canvas.addEventListener("mousemove", function(e) {
+      mousePos = getMousePos(canvas, e);
+    }, false);
+  
+    // Add touch event support for mobile
+    canvas.addEventListener("touchstart", function(e) {
+  
+    }, false);
+  
+    canvas.addEventListener("touchmove", function(e) {
+      var touch = e.touches[0];
+      var me = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(me);
+    }, false);
+  
+    canvas.addEventListener("touchstart", function(e) {
+      mousePos = getTouchPos(canvas, e);
+      var touch = e.touches[0];
+      var me = new MouseEvent("mousedown", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(me);
+    }, false);
+  
+    canvas.addEventListener("touchend", function(e) {
+      var me = new MouseEvent("mouseup", {});
+      canvas.dispatchEvent(me);
+    }, false);
+  
+    function getMousePos(canvasDom, mouseEvent) {
+      var rect = canvasDom.getBoundingClientRect();
+      return {
+        x: mouseEvent.clientX - rect.left,
+        y: mouseEvent.clientY - rect.top
+      }
+    }
+  
+    function getTouchPos(canvasDom, touchEvent) {
+      var rect = canvasDom.getBoundingClientRect();
+      return {
+        x: touchEvent.touches[0].clientX - rect.left,
+        y: touchEvent.touches[0].clientY - rect.top
+      }
+    }
+  
+    function renderCanvas() {
+      if (drawing) {
+        ctx.moveTo(lastPos.x, lastPos.y);
+        ctx.lineTo(mousePos.x, mousePos.y);
+        ctx.stroke();
+        lastPos = mousePos;
+      }
+    }
+  
+    // Prevent scrolling when touching the canvas
+    document.body.addEventListener("touchstart", function(e) {
+      if (e.target == canvas) {
+        e.preventDefault();
+      }
+    }, false);
+    document.body.addEventListener("touchend", function(e) {
+      if (e.target == canvas) {
+        e.preventDefault();
+      }
+    }, false);
+    document.body.addEventListener("touchmove", function(e) {
+      if (e.target == canvas) {
+        e.preventDefault();
+      }
+    }, false);
+  
+    (function drawLoop() {
+      requestAnimFrame(drawLoop);
+      renderCanvas();
+    })();
