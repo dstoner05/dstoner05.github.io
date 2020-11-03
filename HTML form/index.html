@@ -36,16 +36,23 @@
             
         </div>
         <form>
+            <script>
+                $(document).ready(function(){
+                    $('.True').click(function() {
+                        $('.True').not(this).prop('checked', false);
+                    });
+                });
+            </script>
             <div class="container">
                 <div class="header">
                     <h3>Master Switch On</h3>
                 </div>
                 <div class="Pass">
-                    <input type="checkbox" id="q1" name="q1" style="height:20px; width:20px;">
+                    <input type="checkbox" id="q1" name="q1" style="height:20px; width:20px;" onclick="selectOnlyThis(this.pass)">
                     <label for="q1"></label><br>
                 </div>
                 <div class="Fail">
-                    <input type = "checkbox" id = "q1.1" name= "q1.1" style="height:20px; width:20px;">
+                    <input type = "checkbox" id = "q1.1" name= "q1.1" style="height:20px; width:20px;" onclick="selectOnlyThis(this.fail)">
                     <label for="q1.1"></label>
                 </div> 
             </div>

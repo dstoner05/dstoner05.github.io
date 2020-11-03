@@ -132,6 +132,10 @@ input[type=button] {
     font-size:15pt;
 }
 
+input[type="text"] {
+    background-color:#CCCCCC;
+}
+
 
 
 
