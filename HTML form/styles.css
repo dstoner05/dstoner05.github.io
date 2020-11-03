@@ -110,6 +110,14 @@ h2 {
         justify-content: flex-end;
         align-items:flex-start;
     }
+    .notesbox {
+        border-left-color:black;
+        display:flex;
+        height:60px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:100px;
+    }
 } 
 
 @media screen and (max-width: 1100px) {
@@ -135,6 +143,14 @@ h2 {
         width: 100px;
         justify-content: flex-end;
         align-items:flex-start;
+    }
+    .notesbox {
+        border-left-color:black;
+        display:flex;
+        height:60px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:100px;
     }
 } 
 
@@ -162,54 +178,85 @@ h2 {
         justify-content: flex-end;
         align-items:flex-start;
     }
-    @media screen and (max-width: 500px) {
-        .container {
-            padding-left: 10px;
-            height:55px;
-            display:flex;
-            justify-content:space-between;
-            align-items: flex-start;
-        }
-        .container1 {
-            background-color:#3930B1;
-            padding-left: 10px;
-            height:55px;
-            display:flex;
-            justify-content:space-between;
-            align-items: flex-start;
-        }
-        .Fail {
-            border-left-color:black;
-            padding-right: 10px;
-            display: flex;
-            width: 100px;
-            justify-content: flex-end;
-            align-items:flex-start;
-        }
-    } 
-    @media screen and (max-width: 320px) {
-        .container {
-            padding-left: 10px;
-            height:65px;
-            display:flex;
-            justify-content:space-between;
-            align-items: flex-start;
-        }
-        .container1 {
-            background-color:#3930B1;
-            padding-left: 10px;
-            height:65px;
-            display:flex;
-            justify-content:space-between;
-            align-items: flex-start;
-        }
-        .Fail {
-            border-left-color:black;
-            padding-right: 20px;
-            display: flex;
-            width: 100px;
-            justify-content: flex-end;
-            align-items:flex-start;
-        }
-    } 
+    .notesbox {
+        border-left-color:black;
+        display:flex;
+        height:60px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding-left: 10px;
+        height:55px;
+        display:flex;
+        justify-content:space-between;
+        align-items: flex-start;
+    }
+    .container1 {
+        background-color:#3930B1;
+        padding-left: 10px;
+        height:55px;
+        display:flex;
+        justify-content:space-between;
+        align-items: flex-start;
+    }
+    .Fail {
+        border-left-color:black;
+        padding-right: 10px;
+        display: flex;
+        width: 100px;
+        justify-content: flex-end;
+        align-items:flex-start;
+    }
+    .notesbox {
+        border-left-color:black;
+        display:flex;
+        height:60px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:10px;
+    }
+
+    input[type=checkbox] {
+        width:40px;
+        height:40px;
+    }
+} 
+@media screen and (max-width: 320px) {
+    .container {
+        padding-left: 10px;
+        height:65px;
+        display:flex;
+        justify-content:space-between;
+        align-items: flex-start;
+    }
+    .container1 {
+        background-color:#3930B1;
+        padding-left: 10px;
+        height:65px;
+        display:flex;
+        justify-content:space-between;
+        align-items: flex-start;
+    }
+    .Fail {
+        border-left-color:black;
+        padding-right: 20px;
+        display: flex;
+        width: 100px;
+        justify-content: flex-end;
+        align-items:flex-start;
+    }
+    .notesbox {
+        border-left-color:black;
+        display:flex;
+        height:60px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:10px;
+    }
 } 
