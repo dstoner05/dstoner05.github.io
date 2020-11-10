@@ -383,7 +383,6 @@ input[type="checkbox"] {
         width:40px;
     }
 }
-} 
 @media screen and (min-width: 320px) {
     .container {
         margin-top:10px;
