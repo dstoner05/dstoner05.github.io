@@ -155,7 +155,7 @@ span.intro{
 
 
 .education {
-    margin-top:300px;
+    margin-top:15%;
     padding-top:30px;
     border-style:solid;
     border-top:2px solid black;
@@ -165,7 +165,7 @@ span.intro{
 }
 
 .work-experience {
-    margin-top:400px;
+    margin-top:30%;
     padding-top:30px;
     font-size: 20;
     border-style:solid;
@@ -183,7 +183,7 @@ li {
 }
 
 .relexperience {
-    margin-top:200px;
+    margin-top:15%;
     padding-top:30px;
     border-style:solid;
     border-top:2px solid black;
@@ -199,7 +199,7 @@ li {
 
 .references {
     font-size: 25;
-    margin-top:200px;
+    margin-top:15%;
     padding-top:30px;
     border-style:solid;
     border-top:2px solid black;
@@ -209,7 +209,7 @@ li {
 }
 
 .leadership {
-    margin-top:600px;
+    margin-top:30%;
     padding-top:30px;
     border-style:solid;
     border-top:2px solid black;
@@ -219,7 +219,7 @@ li {
 }
 
 .snippet {
-    margin-top:260px;
+    margin-top:20%;
     padding-top:30px;
     border-style:solid;
     border-top:2px solid black;
