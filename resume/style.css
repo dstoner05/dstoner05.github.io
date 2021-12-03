@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "CustomFont";
+    src: url("ubuntu-n1m0-webfont.woff")format("woff");
+}
+
+body {
+    font-family: "CustomFont";
+}
+
 
 #myVideo {
     position: fixed;
@@ -10,6 +19,7 @@
 }
 
 .navigation {
+    position:fixed;
     display:inline-block;
     width:20%;
     height:100%;
@@ -23,11 +33,12 @@
     display: inline-block;
     vertical-align: top;
     width:70%;
-    height:80%;
-    margin-left: 5%;
+    height:700%;
+    margin-left: 25%;
     margin-top:5%;
     background-color:#ededeb;
     text-align:center;
+    border-radius:2px;
 }
 
 img {
@@ -41,6 +52,7 @@ img {
     border-width:5px;
     border-color: white;
     text-align:center;
+    border-radius:2px;
 }
 
 ul {
@@ -68,6 +80,7 @@ ul {
 }
 
 .submit-button {
+    font-family: "CustomFont";
     font-size:22;
     background-color: black;
     border-top:black;
@@ -83,7 +96,7 @@ ul {
     border-width:5;
 } */
 
-.tab1, .tab2, .tab3, .tab4, .tab5 {
+.tab, .tab1, .tab2, .tab3, .tab4, .tab5, .tab6 {
     text-align:left;
     margin-top:10px;
     margin-bottom: 20px;
@@ -103,6 +116,11 @@ h1.detail {
     font-weight: 500;
     font-size:50;
     color:black;
+    border-bottom:#2e3cff;
+    border-style:solid;
+    border-top:#ededeb;
+    border-left:#ededeb;
+    border-right:#ededeb;
 }
 
 span.intro{ 
@@ -117,10 +135,13 @@ span.intro{
 }
 
 .download-button {
+    font-family: "CustomFont";
     background-color:black;
     border-color: black;
     color:white;
     font-size:20;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 .button-wrapper {
@@ -129,8 +150,84 @@ span.intro{
     border-width:2px;
     margin-top:10px;
     margin-bottom:10px;
+    border-radius:2px;
 }
 
+
+.education {
+    margin-top:300px;
+    padding-top:30px;
+    border-style:solid;
+    border-top:2px solid black;
+    border-left: none;
+    border-right:none;
+    border-bottom: none;
+}
+
+.work-experience {
+    margin-top:400px;
+    padding-top:30px;
+    font-size: 20;
+    border-style:solid;
+    border-top:2px solid black;
+    border-left: none;
+    border-right:none;
+    border-bottom: none;
+
+
+}
+li {
+    list-style:none;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.relexperience {
+    margin-top:200px;
+    padding-top:30px;
+    border-style:solid;
+    border-top:2px solid black;
+    border-left: none;
+    border-right:none;
+    border-bottom: none;
+}
+
+.img3 {
+    height:150;
+}
+
+
+.references {
+    font-size: 25;
+    margin-top:200px;
+    padding-top:30px;
+    border-style:solid;
+    border-top:2px solid black;
+    border-left: none;
+    border-right:none;
+    border-bottom: none;
+}
+
+.leadership {
+    margin-top:600px;
+    padding-top:30px;
+    border-style:solid;
+    border-top:2px solid black;
+    border-left: none;
+    border-right:none;
+    border-bottom: none;
+}
+
+.snippet {
+    margin-top:260px;
+    padding-top:30px;
+    border-style:solid;
+    border-top:2px solid black;
+    border-left: none;
+    border-right:none;
+    border-bottom: none;
+    font-size: 40;
+}
 
 @media only screen and (max-width:680px) {
 
